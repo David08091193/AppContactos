@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppContactos.ResumenPage"
+             Title="Resumen de Contacto">
+
+    <ContentPage.Resources>
+        <!-- Estilo explícito para Label -->
+        <Style x:Key="labelEstilo" TargetType="Label">
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="TextColor" Value="DarkGreen"/>
+            <Setter Property="Margin" Value="0,5"/>
+        </Style>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="10">
+
+            <Image Source="circulo_azul_usuario_blanco_78370_4707_bx.jpg"
+                   HeightRequest="150"
+                   HorizontalOptions="Center"
+                   Aspect="AspectFit"/>
+
+            <Label Text="Datos del contacto:" FontAttributes="Bold" FontSize="20" TextColor="Black"/>
+            <Label x:Name="datosLabel" Style="{StaticResource labelEstilo}"/>
+            <Image Source="contacto.png" HeightRequest="120" HorizontalOptions="Center"/>
+            <Button Text="Exportar a TXT" Clicked="OnExportarClicked"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
